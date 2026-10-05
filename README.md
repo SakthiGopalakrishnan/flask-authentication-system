@@ -137,14 +137,6 @@ http://127.0.0.1:5000
 - Error Handlers
 - File Uploads
 
-## Future Improvements
-
-- CSRF Protection
-- REST APIs
-- JWT Authentication
-- Email-Based Password Reset
-- Deployment on Render/Railway
-- MySQL/PostgreSQL Support
 
 ## Author
 
