@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+<div class="card mx-auto" style="max-width: 500px;">
+<div class="card-body">
+
+
+<h1>Edit Profile</h1>
+<form action="/update-profile" method="POST">
+    <label>Username:</label>
+    <input type="text" name="username" value="{{user.username}}">
+    <button type="submit">Submit</button>
+</form>
+
+</div>
+</div>
+</div>
+
+{% endblock %}

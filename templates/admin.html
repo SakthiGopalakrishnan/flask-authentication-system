@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Admin Dashboard</h1>
+
+<form action="/admin" method="GET">
+    <input type="text" name="search" placeholder="Search User">
+    <button type="submit">Search</button>
+</form>
+{% for user in users %}
+<p>
+{{user.id}}
+{{user.username}}
+{{user.role}}
+
+{% if user.role =="user" %}
+<a href="/promote/{{user.username}}">Promote</a>
+{% endif %}
+
+{% if user.role=="admin" %}
+<a href="/demote/{{user.username}}">Demote</a>
+{% endif %}
+
+<a href="/delete-user/{{user.username}}">Delete</a>
+
+</p>
+{% endfor %}
+<a href="/admin?page={{page-1}}">Previous</a>
+<a href="/admin?page={{page+1}}">Next</a>
+{% endblock %}

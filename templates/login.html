@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="container mt-5">
+<div class="card mx-auto" style="max-width: 500px;">
+<div class="card-body">
+<h1>Login</h1>
+
+<form action="/submit-login" method="POST">
+
+    <label>Username:</label>
+    <input type="text" name="username" class="form-control">
+
+    <br><br>
+
+    <label>Password:</label>
+    <input type="password" name="password" class="form-control">
+
+    <br><br>
+
+    <button type="submit" class="btn btn-primary">
+        Login
+    </button>
+
+    <br>
+
+    <a href="/forgot-password">Forgot Password?</a>
+
+</form>
+</div>
+</div>
+</div>
+{% endblock %}

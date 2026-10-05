@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/save-profile-image" method="POST" enctype="multipart/form-data">
+    <input type="file" name="profile_image">
+    <button type="submit">Upload</button>
+</form>
+
+
+{% endblock %}
